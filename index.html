@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/logo-dev.png" type="image/x-icon">
+		<script src="assets/js/envia_dados.js"></script>
 
 	</head>
 	<body class="is-preload">
@@ -57,7 +58,7 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Olá, Meu nome é <strong>Fabio Cavalheiro</strong>, sou Desenvolvedor web, desktop e mobile<br />
+								<h2 class="alt">Olá, Meu nome é <strong>Fabio Cavalheiro</strong>, sou Desenvolvedor web, Desktop e Mobile.<br />
 								Minha missão é surpriender você, com que posso entregar.</h2>
 								<p>Com anos de experiência em desenvolvimento web e software, eu ofereço soluções personalizadas <br />
 								que atendem às suas necessidades específicas.</p>
@@ -79,9 +80,9 @@
 							</header>
 
 							<p>Os sites são elegantes, responsivos e projetados para destacar sua presença online. 
-                               Seja você um empreendedor, uma pequena empresa ou uma grande corporação, até mesmo pode ser para pessoas que querem se destacar na internet.
-                               Posso criar um site sob medida que 
-                               impressionará seus visitantes e impulsionará seus negócios.</p>
+								Seja você um empreendedor, uma pequena empresa ou uma grande corporação, 
+								até mesmo para pessoas que desejam se destacar na internet, 
+								posso criar um site sob medida que impressionará seus visitantes e impulsionará seus negócios.</p>
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
@@ -106,9 +107,9 @@
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+										<a href="photofile/index.html" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
 										<header>
-											<h3>Natoque Vitae</h3>
+											<h3>Galeria de Carros</h3>
 										</header>
 									</article>
 								</div>
@@ -162,15 +163,16 @@
 
 							<p>Confie e venha transformar suas ideias em realidade digital. Entre em contato hoje mesmo e descubra como podemos levar sua presença online e eficiência operacional a um novo patamar!</p>
 
-							<form method="post" action="assets/php/salva_dados.php">
+							<form>
 								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Nome" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" id="name" placeholder="Nome" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" id="email" placeholder="Email" /></div>
 									<div class="col-12">
-										<textarea name="message" placeholder="Mensagem"></textarea>
+										<textarea id="messagem" placeholder="Mensagem"></textarea>
 									</div>
 									<div class="col-12">
-										<input type="submit" value="Enviar mensagem" />
+										<!-- <input type="submit" value="Enviar mensagem" /> -->
+										<button type="button" onclick="enviarWhatsapp()">Enviar mensagem</button>
 									</div>
 								</div>
 							</form>
@@ -196,7 +198,10 @@
 
 			<div id="scripts">
    
-				<a href="https://api.whatsapp.com/send?phone=5511940382765" class="float" target="_blank"><i class="fab fa-whatsapp my-float"></i></a>      <style>    .float{      position:fixed;      cursor:pointer;      display:block;      width:60px;      height:60px;      bottom:40px;      right:40px;      background-color:rgba(0,200,0,1);      color:white;      border-radius:50px;      text-align:center;      font-size:30px;      transition-duration: 0.5s;      animation:pulse 3s infinite;      z-index:9000;  }  .float:hover {      background-color:rgba(0,150,0,1);      color:white;  }  .my-float { margin-top:15px; }  @-webkit-keyframes pulse {      0% {-webkit-box-shadow: 0 0 0 0 rgba(0,200,0, 1);}      70% {-webkit-box-shadow: 0 0 0 20px rgba(0,200,0, 0);}      100% {-webkit-box-shadow: 0 0 0 0 rgba(0,200,0, 0);}  }  </style>
+				<!-- <a href="https://api.whatsapp.com/send?phone=5511940382765" class="float" target="_blank"><i class="fab fa-whatsapp my-float"></i></a>      <style>    .float{      position:fixed;      cursor:pointer;      display:block;      width:60px;      height:60px;      bottom:40px;      right:40px;      background-color:rgba(0,200,0,1);      color:white;      border-radius:50px;      text-align:center;      font-size:30px;      transition-duration: 0.5s;      animation:pulse 3s infinite;      z-index:9000;  }  .float:hover {      background-color:rgba(0,150,0,1);      color:white;  }  .my-float { margin-top:15px; }  @-webkit-keyframes pulse {      0% {-webkit-box-shadow: 0 0 0 0 rgba(0,200,0, 1);}      70% {-webkit-box-shadow: 0 0 0 20px rgba(0,200,0, 0);}      100% {-webkit-box-shadow: 0 0 0 0 rgba(0,200,0, 0);}  }  </style> -->
+				<!-- https://wa.me/5511940382765?text=teste -->
+				<a href="https://wa.me/5511940382765?text=Olá, gostaria de saber mais sobre seus serviços?" class="float" target="_blank"><i class="fab fa-whatsapp my-float"></i></a>      <style>    .float{      position:fixed;      cursor:pointer;      display:block;      width:60px;      height:60px;      bottom:40px;      right:40px;      background-color:rgba(0,200,0,1);      color:white;      border-radius:50px;      text-align:center;      font-size:30px;      transition-duration: 0.5s;      animation:pulse 3s infinite;      z-index:9000;  }  .float:hover {      background-color:rgba(0,150,0,1);      color:white;  }  .my-float { margin-top:15px; }  @-webkit-keyframes pulse {      0% {-webkit-box-shadow: 0 0 0 0 rgba(0,200,0, 1);}      70% {-webkit-box-shadow: 0 0 0 20px rgba(0,200,0, 0);}      100% {-webkit-box-shadow: 0 0 0 0 rgba(0,200,0, 0);}  }  </style>
+
 			</div>
 		  <script id="js_externo" type="text/javascript">
 		   
